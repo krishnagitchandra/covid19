@@ -1,11 +1,21 @@
-<div>
-  <h1>corona live tracker in angular</h1>
-  <label>country</label>
-  <select (change)= "getCountry($any($event.target).value)">
-    <option *ngFor = " let country of countries" value="{{country.Slug}}">{{country.Country}}</option>
-  </select>
-  <button (click) ="getCoronaData()">get corona data</button>
-  <h1>total confirmed:{{Confirmed}}</h1>
-  <h1>total recovered:{{Recovered}}</h1>
-  <h1>total deaths:{{Death}}</h1>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="">corona live tracker in angular</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink = 'home'>Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink = 'precautions'>precautions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink = 'helpline'>helpline</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
